@@ -28,6 +28,7 @@ export default function FormPropsTextFields() {
       })
       .catch((err) => {
         console.log(err.message);
+        alert(err.message);
       });
   };
   const handleSignup = (e) => {
@@ -41,6 +42,7 @@ export default function FormPropsTextFields() {
       })
       .catch((err) => {
         console.log(err.message);
+        alert(err.message);
       });
   };
 
@@ -115,7 +117,12 @@ export default function FormPropsTextFields() {
           </div>
         </div>
         <div className="hidden md:block w-full h-[92vh] p-6">
-          <img className="rounded-2xl w-full h-full" src={logpic} alt="" />
+          <img
+            style={{ objectFit: "contain" }}
+            className="rounded-2xl w-full h-full"
+            src={logpic}
+            alt=""
+          />
         </div>
       </div>
     </div>
