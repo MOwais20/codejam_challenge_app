@@ -5,7 +5,7 @@ function App() {
     <div className="App">
       <FoodCard/>
     </div>
-  );
+  )
 }
 
 export default App;
