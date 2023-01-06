@@ -1,16 +1,32 @@
+import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
-
-import Home from "./components/Home";
-import Login from "./components/Login";
+import db from "./config/firebase";
+import { Routes, Route, NavLink } from "react-router-dom";
+const Home = React.lazy(() => import("./components/Home"));
+const LoginForm = React.lazy(() => import("./components/LoginForm"));
 
 function App() {
   return (
-    <div className="App">
-      <Home />
+    <Routes>
+      <Route
+        index
+        element={
+          <React.Suspense fallback={<>...</>}>
+            <Home />
+          </React.Suspense>
+        }
+      />
 
-      {/* <Login /> */}
-    </div>
+      <Route
+        path="/login"
+        element={
+          <React.Suspense fallback={<>...</>}>
+            <LoginForm />
+          </React.Suspense>
+        }
+      />
+    </Routes>
   );
 }
 
