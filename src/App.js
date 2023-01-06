@@ -1,5 +1,4 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
 import db from "./config/firebase";
 import { Routes, Route, NavLink } from "react-router-dom";
