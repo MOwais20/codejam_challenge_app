@@ -3,7 +3,7 @@ import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import { useNavigate } from "react-router-dom";
-import logpic from "../images/login.jpg";
+import logpic from "../images/pic.jpg";
 import { Link } from "react-router-dom";
 import Input from "@mui/material/Input";
 
@@ -47,7 +47,7 @@ export default function FormPropsTextFields() {
   };
 
   return (
-    <div className="w-full h-screen flex bg-[#D9E8FB]">
+    <div className="w-full h-screen flex bg-[#b2ec9b]">
       {/* <img className='w-[100px] lg:w-[200px] h-[200px] absolute' src={logo} alt="" srcset="" /> */}
       <div className=" bg-gray-100 grid grid-cols-1 md:grid-cols-2 m-auto h-[92vh] shadow-lg sm:max-w-[990px] rounded-2xl">
         <div
@@ -118,7 +118,7 @@ export default function FormPropsTextFields() {
         </div>
         <div className="hidden md:block w-full h-[92vh] p-6">
           <img
-            style={{ objectFit: "contain" }}
+            style={{ objectFit: "cover" }}
             className="rounded-2xl w-full h-full"
             src={logpic}
             alt=""
