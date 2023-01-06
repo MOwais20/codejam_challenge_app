@@ -2,6 +2,7 @@ import React from "react";
 import { get, ref, set, onValue } from "firebase/database";
 import { db, auth } from "../config/firebase";
 import Navbar from "./Navbar";
+const FoodCategory = React.lazy(() => import("./FoodByCategory"));
 
 const Home = () => {
   React.useEffect(() => {
@@ -21,7 +22,13 @@ const Home = () => {
     });
   }, []);
 
-  return <Navbar />;
+  return (
+    <div>
+      <Navbar />
+
+      <FoodCategory />
+    </div>
+  );
 };
 
 export default Home;
