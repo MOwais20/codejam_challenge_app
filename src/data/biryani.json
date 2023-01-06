@@ -1,0 +1,71 @@
+{
+    "type": "product",
+    "products": [
+      {
+        "id": 715783,
+        "title": "Shan Biryani Masala, 50 g",
+        "image": "https://spoonacular.com/productImages/715783-312x231.jpeg",
+        "imageType": "jpeg"
+      },
+      {
+        "id": 414199,
+        "title": "Deep Home Style Biryani Paste, 10 oz",
+        "image": "https://spoonacular.com/productImages/414199-312x231.jpeg",
+        "imageType": "jpeg"
+      },
+      {
+        "id": 414413,
+        "title": "Saffron Road Frozen Dinner, Chicken Biryani with Basmati Rice, 10 oz",
+        "image": "https://spoonacular.com/productImages/414413-312x231.jpeg",
+        "imageType": "jpeg"
+      },
+      {
+        "id": 412135,
+        "title": "Tasty Bite Brown Rice Biryani, 8.8 oz",
+        "image": "https://spoonacular.com/productImages/412135-312x231.jpeg",
+        "imageType": "jpeg"
+      },
+      {
+        "id": 5061256,
+        "title": "Pack Of 2 - MDH Hyderabadi Biryani Masala - 50 Gm (1.75Oz)",
+        "image": "https://spoonacular.com/productImages/5061256-312x231.png",
+        "imageType": "png"
+      },
+      {
+        "id": 5051890,
+        "title": "Shan Pilau Biryani Masala 2 Packs Of 50 Grams Each, Original Imported",
+        "image": "https://spoonacular.com/productImages/5051890-312x231.jpeg",
+        "imageType": "jpeg"
+      },
+      {
+        "id": 4030726,
+        "title": "Shahi Biryani Pulav Masala - 50 gms.",
+        "image": "https://spoonacular.com/productImages/4030726-312x231.jpeg",
+        "imageType": "jpeg"
+      },
+      {
+        "id": 3871962,
+        "title": "Pack Of 3 - Ahura Parsi Style Shahi Biryani Masala - 100 Gm",
+        "image": "https://spoonacular.com/productImages/3871962-312x231.jpeg",
+        "imageType": "jpeg"
+      },
+      {
+        "id": 5209536,
+        "title": "Pack Of 5 - Eastern Spice Mix Hyderabadi Biryani Masala - 60 Gm (2.1 Oz)",
+        "image": "https://spoonacular.com/productImages/5209536-312x231.jpeg",
+        "imageType": "jpeg"
+      },
+      {
+        "id": 5277670,
+        "title": "Pack Of 2 - Aachi Biryani Masala - 200 Gm (7 Oz)",
+        "image": "https://spoonacular.com/productImages/5277670-312x231.jpeg",
+        "imageType": "jpeg"
+      }
+    ],
+    "offset": 0,
+    "number": 10,
+    "totalProducts": 286,
+    "processingTimeMs": 294,
+    "expires": 1673133464659,
+    "isStale": false
+  }
