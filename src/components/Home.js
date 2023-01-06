@@ -1,18 +1,13 @@
 import React from "react";
 import { get, ref, set, onValue } from "firebase/database";
-import { db } from "../config/firebase";
+import { db, auth } from "../config/firebase";
 
 const Home = () => {
-  //   function writeUserData(userId, name, email, imageUrl) {
-  //     set(ref(db, "test/" + 1001), {
-  //       username: "mowais",
-  //       email: "abc@gmail.com",
-  //       profile_picture: "/",
-  //     });
-  //   }
-
   React.useEffect(() => {
-    const query = ref(db, "food_app");
+    // Get logged In user ID.
+    const user_Id = auth?.currentUser?.uid;
+
+    const query = ref(db, "food_app/" + user_Id);
     return onValue(query, (snapshot) => {
       const data = snapshot.val();
       console.log("🚀 ~ file: Home.js:18 ~ returnonValue ~ data", data);

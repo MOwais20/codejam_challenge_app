@@ -22,7 +22,7 @@ const app = initializeApp(firebaseConfig);
 
 export const db = getDatabase(app);
 
-const auth = getAuth();
+export const auth = getAuth();
 
 export const signIn = (email, password) => {
   return signInWithEmailAndPassword(auth, email, password);
@@ -38,6 +38,7 @@ export const logout = (email, password) => {
 
 export default {
   db,
+  auth,
   signIn,
   signUp,
   logout,
