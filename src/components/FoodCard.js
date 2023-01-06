@@ -14,7 +14,7 @@ const FoodCard = (props) => {
         }}
       >
         <div className="h-max p-2">
-          <div className="w-full border-solid border-2 border-gray-200 ">
+          <div className="w-full rounded-lg border-solid border-2 border-gray-200 ">
             <img
               height={100}
               width={100}
@@ -28,8 +28,10 @@ const FoodCard = (props) => {
             {props?.title?.substring(5, 45) + "..."}
           </h1>
           {/* <Card> */}
-          <div className="flex items-center justify-center py-5">
-            <span className="text-red-400 font-normal">Add to Favorite </span>
+          <div className="flex items-center border-solid border-2 border-red-200 justify-center py-2 px-1 rounded-lg cursor-pointer">
+            <span className="text-red-400 text-md font-normal">
+              Add to Favorite{" "}
+            </span>
             <LikeButton />
           </div>
           {/* </Card> */}
