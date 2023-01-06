@@ -99,10 +99,21 @@ const FoodByCategory = () => {
       <Container fluid="true">
         <Box sx={{ height: "100vh" }}>
           <div>
-            <h1 className="text-2xl font-bold p-5 my-2 drop-shadow-sm bg-slate-200 rounded-2xl">
+
+            <h1 className=" text-2xl font-bold p-5 my-2 drop-shadow-sm bg-slate-200 rounded-2xl">
               Food By Category
             </h1>
-
+            <ul className=" p-6 items-center justify-end space-y-8 md:flex md:space-x-6 md:space-y-0">
+                            <li className="text-gray-600 hover:text-blue-600">
+                                <a href="javascript:void(0)">Pizza</a>
+                            </li>
+                            <li className="text-gray-600 hover:text-blue-600">
+                                <a href="javascript:void(0)">Burger</a>
+                            </li>
+                            <li className="text-gray-600 hover:text-blue-600">
+                                <a href="javascript:void(0)">Biryani</a>
+                            </li>
+                        </ul>
             {/* <div
               className="flex flex-wrap align-center"
               style={{ justifyContent: "space-around" }}
