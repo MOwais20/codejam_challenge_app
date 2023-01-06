@@ -47,13 +47,7 @@ const FoodCard = (props) => {
             <span className="text-red-400 text-md font-normal">
               Add / Remove
             </span>
-            <LikeButton
-              objects={{
-                id: props?.id,
-                image: props?.image,
-                title: props?.title,
-              }}
-            />
+            <LikeButton isactive={props.isactive?true:false} objects={{id:props?.id,image:props?.image,title:props?.title}}/>
           </div>
           {/* </Card> */}
         </div>

@@ -4,8 +4,10 @@ import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import { db, auth } from "../config/firebase";
 import { ref, set, get, child, onValue } from "firebase/database";
-import axios from "axios";
 import FoodCard from "./FoodCard";
+import Heart from "react-heart"
+import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 const FoodByCategory = () => {
   function store_in_db(userId, data) {
@@ -84,6 +86,9 @@ const FoodByCategory = () => {
       imageType: "jpeg",
     },
   ]);
+
+  const Count = useSelector((state) => state.favorite.favorite)
+  console.log(Count)
   React.useEffect(() => {
     store_in_db();
     // // axios.get('https://api.spoonacular.com/food/products/search?query=pizza&apiKey=f420c936bac54c61b8a9bb6d6d04e525').then((res) => {
@@ -98,11 +103,16 @@ const FoodByCategory = () => {
       <CssBaseline />
       <Container fluid="true">
         <Box sx={{ height: "100vh" }}>
-          <div>
-            <h1 className="text-2xl font-bold p-5 my-2 drop-shadow-sm bg-slate-200 rounded-2xl">
+          <div style={{ width: "75vw" }} className=" text-2xl font-bold p-5 my-2 drop-shadow-sm bg-slate-200 rounded-2xl">
+            <h1 className="text-2xl font-bold  drop-shadow-sm rounded-2xl">
               Food By Category
             </h1>
-
+            <span className="float-right " style={{ marginTop: "-1.5rem" }}>
+              <Link to='/favorite'>
+                <span style={{ marginLeft: '-20px' }}>{Count.length}</span>
+                <Heart style={{ height: "1.5rem", marginTop: "-30px" }} isActive={true} />
+              </Link>
+            </span>
             {/* <div
               className="flex flex-wrap align-center"
               style={{ justifyContent: "space-around" }}
