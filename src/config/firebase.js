@@ -32,8 +32,13 @@ export const signUp = (email, password) => {
   return createUserWithEmailAndPassword(auth, email, password);
 };
 
+export const logout = (email, password) => {
+  localStorage.removeItem("Auth Token");
+};
+
 export default {
   db,
   signIn,
   signUp,
+  logout,
 };

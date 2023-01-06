@@ -4,7 +4,7 @@ import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import { useNavigate } from "react-router-dom";
 
-import { signIn } from "../config/firebase";
+import { signUp } from "../config/firebase";
 
 export default function FormPropsTextFields() {
   const [email, setEmail] = React.useState("");
@@ -14,13 +14,12 @@ export default function FormPropsTextFields() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    signIn(email, password)
+    signUp(email, password)
       .then((res) => {
         if (res?._tokenResponse?.refreshToken) {
           localStorage.setItem("Auth Token", res._tokenResponse.refreshToken);
           navigate("/");
         }
-        console.log("🚀 ~ file: LoginForm.js:17 ~ .then ~ res", res);
       })
       .catch((err) => {
         console.log(err.message);

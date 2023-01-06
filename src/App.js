@@ -5,6 +5,7 @@ import db from "./config/firebase";
 import { Routes, Route, NavLink } from "react-router-dom";
 const Home = React.lazy(() => import("./components/Home"));
 const LoginForm = React.lazy(() => import("./components/LoginForm"));
+const SignUpForm = React.lazy(() => import("./components/signUpForm"));
 
 function App() {
   return (
@@ -19,7 +20,16 @@ function App() {
       />
 
       <Route
-        path="/login"
+        path="/signUp"
+        element={
+          <React.Suspense fallback={<>...</>}>
+            <SignUpForm />
+          </React.Suspense>
+        }
+      />
+
+      <Route
+        path="/signIn"
         element={
           <React.Suspense fallback={<>...</>}>
             <LoginForm />
