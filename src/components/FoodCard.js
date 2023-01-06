@@ -44,7 +44,9 @@ const FoodCard = (props) => {
           </h1>
           {/* <Card> */}
           <div className="flex items-center border-solid border-2 border-red-200 justify-center py-2 px-1 rounded-lg cursor-pointer">
-            <span className="text-red-400 text-md font-normal">Added </span>
+            <span className="text-red-400 text-md font-normal">
+              Add / Remove
+            </span>
             <LikeButton
               objects={{
                 id: props?.id,
