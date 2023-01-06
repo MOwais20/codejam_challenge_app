@@ -3,13 +3,23 @@ import logo from "./logo.svg";
 import "./App.css";
 import db from "./config/firebase";
 import { Routes, Route, NavLink } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 const Home = React.lazy(() => import("./components/Home"));
 const LoginForm = React.lazy(() => import("./components/LoginForm"));
 const SignUpForm = React.lazy(() => import("./components/signUpForm"));
-const AboutPage = React.lazy(() => import('./Page/About'))
+const AboutPage = React.lazy(() => import("./Page/About"));
 const FoodCategory = React.lazy(() => import("./components/FoodByCategory"));
 
 function App() {
+  const navigate = useNavigate();
+
+  // React.useEffect(() => {
+  //   const token = localStorage.getItem("Auth_Token");
+  //   if (!token ) {
+  //     navigate("/signIn");
+  //   }
+  // }, []);
+
   return (
     <Routes>
       <Route
