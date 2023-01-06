@@ -3,14 +3,16 @@ import logo from "./logo.svg";
 import "./App.css";
 import db from "./config/firebase";
 import { Routes, Route, NavLink } from "react-router-dom";
+import Navbar from "./components/Navbar";
 const Home = React.lazy(() => import("./components/Home"));
 const LoginForm = React.lazy(() => import("./components/LoginForm"));
 const SignUpForm = React.lazy(() => import("./components/signUpForm"));
 const AboutPage = React.lazy(() => import('./Page/About'))
 const FoodCategory = React.lazy(() => import("./components/FoodByCategory"));
-
+const Favorites = React.lazy(()=>import('./components/Favourites'))
 function App() {
-  return (
+  return (<>
+    <Navbar />
     <Routes>
       <Route
         index
@@ -25,6 +27,14 @@ function App() {
         element={
           <React.Suspense fallback={<>...</>}>
             <FoodCategory />
+          </React.Suspense>
+        }
+      />
+      <Route
+        path="/favorite"
+        element={
+          <React.Suspense fallback={<>...</>}>
+            <Favorites />
           </React.Suspense>
         }
       />
@@ -55,6 +65,7 @@ function App() {
         }
       />
     </Routes>
+  </>
   );
 }
 

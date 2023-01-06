@@ -18,7 +18,7 @@ export default function LikeButton(props) {
             });
         }
     }
-    const [active, setActive] = useState(false)
+    const [active, setActive] = useState(props.isactive)
 
     const SavedorRemove = async () => {
         if (active) {
