@@ -5,6 +5,8 @@ import Container from "@mui/material/Container";
 import { db, auth } from "../config/firebase";
 import { ref, set, get, child, onValue } from "firebase/database";
 
+import FoodCard from "./FoodCard";
+
 const FoodByCategory = () => {
   function store_in_db(userId, data) {
     // Get logged In user ID.
@@ -29,10 +31,19 @@ const FoodByCategory = () => {
       <CssBaseline />
       <Container fluid="true">
         <Box sx={{ height: "100vh" }}>
-          <div className="">
+          <div>
             <h1 className="text-2xl font-bold p-5 my-2 drop-shadow-sm bg-slate-200 rounded-2xl">
               Food By Category
             </h1>
+
+            <div
+              className="flex flex-wrap align-center"
+              style={{ justifyContent: "space-around" }}
+            >
+              {[1, 2, 3, 4].map((el) => (
+                <FoodCard />
+              ))}
+            </div>
           </div>
         </Box>
       </Container>

@@ -28,12 +28,13 @@ function App() {
           </React.Suspense>
         }
       />
-      path="cards" element=
-      {
-        <React.Suspense fallback={<>...</>}>
-          <Cards />
-        </React.Suspense>
-      }
+      <Route
+        path="cards"
+        element={
+          <React.Suspense fallback={<>...</>}>
+            <Cards />
+          </React.Suspense>
+        }
       />
       <Route
         path="/signUp"
