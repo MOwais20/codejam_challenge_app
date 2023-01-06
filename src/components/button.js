@@ -1,9 +1,13 @@
-const Button = () => {
-    return (
-        <>
-            Button
-        </>
-    )
-}
+import React, { useState } from "react";
+import Heart from "react-heart"
 
-export default Button
+
+
+export default function LikeButton() {
+    const [active, setActive] = useState(false)
+    return (
+        <div style={{ width: "2rem" }} className="mx-4 ">
+			<Heart isActive={active} onClick={() => setActive(!active)}/>
+		</div>
+    );
+}
