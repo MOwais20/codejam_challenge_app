@@ -48,18 +48,42 @@ const FoodByCategory = () => {
             style={{ width: "100%" }}
             className=" text-2xl font-bold p-5 my-2 drop-shadow-sm bg-slate-200 rounded-2xl"
           >
+            <div>
+              <h1 className=" text-2xl font-bold p-5 my-2 drop-shadow-sm bg-slate-200 rounded-2xl">
+                Food By Category
+              </h1>
+              <ul className=" p-6 items-center justify-end space-y-8 md:flex md:space-x-6 md:space-y-0">
+                <li className="text-gray-600 hover:text-blue-600">
+                  <a href="javascript:void(0)">Pizza</a>
+                </li>
+                <li className="text-gray-600 hover:text-blue-600">
+                  <a href="javascript:void(0)">Burger</a>
+                </li>
+                <li className="text-gray-600 hover:text-blue-600">
+                  <a href="javascript:void(0)">Biryani</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div
+            style={{ width: "75vw" }}
+            className=" text-2xl font-bold p-5 my-2 drop-shadow-sm bg-slate-200 rounded-2xl"
+          >
             <h1 className="text-2xl font-bold  drop-shadow-sm rounded-2xl">
               Food By Category
             </h1>
-            <span className="float-right " style={{ marginTop: "-1.5rem" }}>
-              <Link to="/favorite">
+            <Link className="w-full" to="/favorite">
+              <span
+                className="float-right p-1 rounded-2xl"
+                style={{ marginTop: "-1.5rem", background: "grey" }}
+              >
                 <span style={{ marginLeft: "-20px" }}>{Count.length}</span>
                 <Heart
                   style={{ height: "1.5rem", marginTop: "-30px" }}
                   isActive={true}
                 />
-              </Link>
-            </span>
+              </span>
+            </Link>
             {/* <div
               className="flex flex-wrap align-center"
               style={{ justifyContent: "space-around" }}
