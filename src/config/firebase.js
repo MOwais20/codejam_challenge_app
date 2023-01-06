@@ -1,5 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { getDatabase, ref } from "firebase/database";
+
 import {
   getAuth,
   signInWithEmailAndPassword,
@@ -32,8 +33,10 @@ export const signUp = (email, password) => {
   return createUserWithEmailAndPassword(auth, email, password);
 };
 
+
 export const logout = () => {
   localStorage.removeItem("Auth_Token");
+  
 };
 
 export default {
