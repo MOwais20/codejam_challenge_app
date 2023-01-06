@@ -1,7 +1,26 @@
 import React from 'react'
+import { logout } from "../config/firebase";
+import { useNavigate } from "react-router-dom";
+
+
 
 const Navbar = () => {
     const [navbar, setNavbar] = React.useState(false);
+
+    const navigate = useNavigate();
+    const handleLogOut = (e) => {
+        e.preventDefault();
+        logout()
+          .then((res) => {
+            if (res?._tokenResponse?.refreshToken) {
+              localStorage.setItem("Auth_Token", res._tokenResponse.refreshToken);
+              navigate("/signIn");
+            }
+          })
+          .catch((err) => {
+            console.log(err.message);
+          });
+      };
   return (
     <nav className="w-full bg-white shadow">
             <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
@@ -67,7 +86,14 @@ const Navbar = () => {
                             <li className="text-gray-600 hover:text-blue-600">
                                 <a href="javascript:void(0)">Contact US</a>
                             </li>
-                        </ul>
+                            <li>
+                            <button
+                            
+                        className="bg-[#ae3700] rounded-xl text-white p-3 px-6 font-bold hover:scale-105 duration-100 "
+                        >Logout
+                        </button>
+                            </li>
+                        </ul> 
                     </div>
                 </div>
             </div>

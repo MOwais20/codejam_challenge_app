@@ -32,7 +32,7 @@ export const signUp = (email, password) => {
   return createUserWithEmailAndPassword(auth, email, password);
 };
 
-export const logout = (email, password) => {
+export const logout = () => {
   localStorage.removeItem("Auth_Token");
 };
 
