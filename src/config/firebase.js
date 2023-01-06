@@ -33,7 +33,7 @@ export const signUp = (email, password) => {
 };
 
 export const logout = (email, password) => {
-  localStorage.removeItem("Auth Token");
+  localStorage.removeItem("Auth_Token");
 };
 
 export default {

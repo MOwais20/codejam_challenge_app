@@ -2,9 +2,11 @@ import React, { useState } from "react";
 import Heart from "react-heart"
 import { db, auth } from "../config/firebase";
 import { AddtoFavorite, RemoveFromFavorite } from "../Redux/Reducers/favorite.reducer";
-
+import { get, ref, set, onValue } from "firebase/database";
+import { useDispatch } from "react-redux";
 
 export default function LikeButton(props) {
+    const dispatch = useDispatch()
     function store_in_db(userId, data) {
         // Get logged In user ID.
         const user_Id = auth?.currentUser?.uid;
@@ -17,18 +19,20 @@ export default function LikeButton(props) {
         }
     }
     const [active, setActive] = useState(false)
-    const SavedorRemove = async (props) => {    
+
+    const SavedorRemove = async () => {
         if (active) {
-            RemoveFromFavorite(props.object)
+            dispatch(RemoveFromFavorite(props.objects))
             setActive(false)
-        }else{
-            AddtoFavorite(props.object)
+        } else {
+            dispatch(AddtoFavorite(props.objects))
             setActive(true)
-        }    
+        }
     }
+
     return (
         <div style={{ width: "1.2rem" }} className="mx-4 ">
-            <Heart isActive={active} onClick={() => setActive(!active)} />
+            <Heart isActive={active} onClick={() => SavedorRemove()} />
         </div>
     );
 }

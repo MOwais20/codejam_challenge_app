@@ -7,6 +7,8 @@ const Home = React.lazy(() => import("./components/Home"));
 const LoginForm = React.lazy(() => import("./components/LoginForm"));
 const SignUpForm = React.lazy(() => import("./components/signUpForm"));
 const AboutPage = React.lazy(() => import('./Page/About'))
+const FoodCategory = React.lazy(() => import("./components/FoodByCategory"));
+
 function App() {
   return (
     <Routes>
@@ -15,6 +17,14 @@ function App() {
         element={
           <React.Suspense fallback={<>...</>}>
             <Home />
+          </React.Suspense>
+        }
+      />
+      <Route
+        path="/food-category"
+        element={
+          <React.Suspense fallback={<>...</>}>
+            <FoodCategory />
           </React.Suspense>
         }
       />
