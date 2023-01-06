@@ -1,6 +1,7 @@
 import React from "react";
 import { get, ref, set, onValue } from "firebase/database";
 import { db, auth } from "../config/firebase";
+import Navbar from "./Navbar";
 
 const Home = () => {
   React.useEffect(() => {
@@ -20,7 +21,7 @@ const Home = () => {
     });
   }, []);
 
-  return <div>Home</div>;
+  return <Navbar />;
 };
 
 export default Home;
