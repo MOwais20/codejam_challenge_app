@@ -12,7 +12,7 @@ export default function FormPropsTextFields() {
 
   const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
+  const handleSignup = (e) => {
     e.preventDefault();
     signUp(email, password)
       .then((res) => {
@@ -52,7 +52,7 @@ export default function FormPropsTextFields() {
         label="Password"
         defaultValue="Hello World"
       />
-      <Button onClick={handleSubmit} variant="contained">
+      <Button onClick={handleSignup} variant="contained">
         Contained
       </Button>
     </Box>
