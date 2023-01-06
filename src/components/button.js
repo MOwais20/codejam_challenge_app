@@ -21,7 +21,7 @@ export default function LikeButton(props) {
       });
     }
   }
-  const [active, setActive] = useState(false);
+  const [active, setActive] = useState(props.isactive);
 
   const SavedorRemove = async () => {
     if (active) {
@@ -34,8 +34,11 @@ export default function LikeButton(props) {
   };
 
   return (
-    <div style={{ width: "1.2rem" }} className="mx-4 ">
-      <Heart isActive={active} onClick={() => SavedorRemove()} />
+    <div className="flex items-center border-solid border-2 border-red-200 justify-center py-2 px-1 rounded-lg cursor-pointer">
+      <span className="text-red-400 text-md font-normal">Add / Remove</span>
+      <div style={{ width: "1.2rem" }} className="mx-4 ">
+        <Heart isActive={active} onClick={() => SavedorRemove()} />
+      </div>
     </div>
   );
 }

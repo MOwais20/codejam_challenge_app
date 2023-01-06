@@ -24,7 +24,6 @@ const Home = () => {
 
   return (
     <div>
-      <Navbar />
 
       <FoodCategory />
     </div>
