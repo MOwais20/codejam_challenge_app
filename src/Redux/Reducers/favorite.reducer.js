@@ -44,10 +44,11 @@ export const FavoriteCounter = createSlice({
         RemoveFromFavorite: (state, action) => {
             state.favorite.splice(action.payload, 1)
         },
-    },
-    extraReducers: (builder) => {
-        builder.addCase()
     }
+    // },
+    // extraReducers: (builder) => {
+    //     builder.addCase()
+    // }
 })
 
 // Action creators are generated for each case reducer function
