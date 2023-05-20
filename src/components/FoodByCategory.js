@@ -77,7 +77,7 @@ const FoodByCategory = () => {
                 <a href="javascript:void(0)">Biryani</a>
               </li>
             </ul>
-            {/* <div
+              {/* <div
               className="flex flex-wrap align-center"
               style={{ justifyContent: "space-around" }}
             >
